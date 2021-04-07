@@ -26,6 +26,69 @@
         color: wheat;
         border: solid 1px skyblue;
       }
+      .mp_form label,
+      p.label {
+        font-size: 1.2em;
+        font-weight: bold;
+        display: block;
+        color: #222;
+        margin: 0.417em 0 0.083em; /*5px 0 1px*/
+      }
+      .left {
+        text-align: left !important;
+      }
+      .mp_form select,
+      .mp_form input,
+      .mp_form textarea {
+        border: solid 1px #ddd;
+        border-radius: 3px 3px 3px 3px;
+        -webkit-border-radius: 3px 3px 3px 3px;
+        -moz-border-radius: 3px 3px 3px 3px;
+        font-size: 12px;
+      }
+
+      .mp_form select optgroup option {
+        padding-left: 10px;
+      }
+      .mp_form select {
+        padding: 1px 1px 1px 0;
+      }
+      div.old-row:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+      }
+      * html .clearfix,
+      * html div.old-row {
+        height: 1%;
+      }
+      div.old-row {
+        margin-bottom: 7px;
+      }
+      div.c5,
+      div.c11,
+      div.c12 {
+        float: left;
+        margin-right: 15px;
+      }
+
+      .c5 {
+        width: 150px;
+      }
+
+      .c11 {
+        width: 330px;
+      }
+
+      .c12 {
+        width: 360px;
+      }
+
+      .TPad-2 {
+        padding-top: 2.4em;
+      }
     </style>
   </head>
   <body>
@@ -42,7 +105,7 @@
             <h1>col</h1>
           </div>
         </div>
-        <br>  
+        <br />
         <div class="row">
           <div class="col-6">
             <h1>col-6</h1>
@@ -54,7 +117,7 @@
             <h1>col</h1>
           </div>
         </div>
-        <br>  
+        <br />
         <div class="row">
           <div class="col-sm">
             <h1>col-sm</h1>
@@ -66,7 +129,7 @@
             <h1>col-sm</h1>
           </div>
         </div>
-        <br>
+        <br />
         <div class="row">
           <div class="col-sm-6">
             <h1>col-sm-6</h1>
@@ -79,6 +142,32 @@
           </div>
         </div>
       </div>
+    </div>
+    <br />
+    <div class="demo-box">
+      <h2 class="text-info">Old Form</h1>
+      <form class="mp_form">
+        <div class="old-row">
+          <div class="c5 TPad-2">
+            <label>c5</label>
+          </div>
+          <div class="c11">
+            <label class="left">c11</label>
+            <select id="selDemo">
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="c12">
+            <label class="left">c12</label>
+            <input type="text" id="txtDemo" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="demo-box">
+      <h2 class="text-info">Bootstrap Form</h2>
     </div>
     <!-- Bootstrap Bundle with Popper JS -->
     <script
